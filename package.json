@@ -1,0 +1,18 @@
+{
+  "name": "memcached-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aliyun-sdk": "^1.12.3",
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "purdy": "^3.5.1"
+  }
+}

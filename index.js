@@ -54,7 +54,7 @@ function interact(client, domain, dump) {
             });
             const query = input => {
                 return client.exec(input).then(result => {
-                    if (result !== undefined) {
+                    if (result != null) {
                         dump(result);
                     }
                 });
@@ -132,15 +132,18 @@ function ocs(options) {
     };
 
     const domian = `memcached@${options.host}:${options.port}`;
-    const purdy = require('purdy');
 
-    return interact(
+    if(program.args && program.args.length) {
+        return open().then(() => exec(program.args.join(' '))).then(res => res != null && console.log(res)).then(() => client.end())
+    }
+
+    interact(
         {
             open,
             close: client.end.bind(client),
             exec
         },
         domian,
-        purdy
+        console.log
     );
 }

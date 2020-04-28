@@ -12,7 +12,6 @@
   "dependencies": {
     "aliyun-sdk": "^1.12.3",
     "chalk": "^4.0.0",
-    "commander": "^5.0.0",
-    "purdy": "^3.5.1"
+    "commander": "^5.0.0"
   }
 }
